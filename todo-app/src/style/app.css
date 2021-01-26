@@ -1,7 +1,19 @@
+*,
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+}
+
 .app {
   text-align: center;
 }
-
 
 .dashboard {
   width: 250px;
@@ -13,7 +25,6 @@
   background-color: transparent;
   box-sizing: border-box;
   border: transparent;
-
   color: orangered;
   font-size: 20px;
   width: 90%;
@@ -30,5 +41,7 @@
 
 button {
   margin-right: 10px;
-  float: right;  
+  float: right;
 }
+
+/*# sourceMappingURL=app.css.map */

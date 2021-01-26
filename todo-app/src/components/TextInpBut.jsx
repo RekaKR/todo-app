@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './app.css';
+import '../style/app.css';
 
 function TextInpBut() {
   let [arr, setArr] = useState(["Réka"])
