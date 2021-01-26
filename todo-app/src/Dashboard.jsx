@@ -7,7 +7,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <input type="text" className="dashboard-name" placeholder={name} />
+      <input type="text" className="dashboard-name" placeholder={name} onChange={(event) => setName(event.target.placeholder)} />
       <TextInpBut />
     </div>
   );
