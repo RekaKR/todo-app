@@ -1,3 +1,27 @@
 .app {
   text-align: center;
 }
+
+
+.dashboard {
+  width: 250px;
+  min-height: 100px;
+  background-color: lightgray;
+}
+
+.dashboard-name {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: transparent;
+
+  color: orangered;
+  font-size: 20px;
+  width: 90%;
+  padding: 10px 0 10px 5px;
+}
+
+.card-text {
+  width: 90%;
+  min-height: 100px;
+  background-color: orchid;
+}
