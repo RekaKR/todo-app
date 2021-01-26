@@ -1,7 +1,7 @@
 import React from 'react';
 import './app.css';
 
-function TextInpBut(props) {
+function TextInpBut() {
 
   return (
     <div className="text-inp-but">

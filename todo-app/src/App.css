@@ -23,5 +23,12 @@
 .card-text {
   width: 90%;
   min-height: 100px;
-  background-color: orchid;
+  background-color: white;
+  margin: 10px 0;
+  border: none;
+}
+
+button {
+  margin-right: 10px;
+  float: right;  
 }
