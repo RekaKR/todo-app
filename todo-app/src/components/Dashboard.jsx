@@ -30,19 +30,6 @@ function Dashboard() {
         <div>{cards}</div>
       </div>
     </div>
-    // <div className='dashboard'>
-    //   <input
-    //     type='text'
-    //     className='dashboard-name'
-    //     value={listNameV}
-    //     placeholder='Untilted dashboard'
-    //     onChange={(event) => {
-    //       setNames(event.target.value);
-    //       localStorage.setItem('listName', event.target.value);
-    //     }}
-    //   />
-    //   <TextInpBut />
-    // </div>
   );
 }
 
