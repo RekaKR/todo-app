@@ -9,7 +9,7 @@ function Dashboard() {
   const addCard = () => {
     setCards([...cards, <Cards key={uuidv4()} />]);
   };
-
+  console.log(cards);
   return (
     <div className='dashboard'>
       <div>
