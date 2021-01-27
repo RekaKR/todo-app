@@ -16,26 +16,50 @@ textarea {
   text-align: center;
 }
 
-#root {
-  overflow-x: scroll;
+button {
+  margin-right: 10px;
 }
 
-.dashboard {
+.dashBoardContainer {
+  height: 90vh;
+  display: flex;
+}
+.dashBoardContainer .dashboard {
   background-color: lightgrey;
 }
-
-.dashboard-name {
+.dashBoardContainer .dashboard .dashboard-name {
+  width: 90%;
+  color: orangered;
   background-color: transparent;
-  box-sizing: border-box;
+  padding: 10px 0 10px 5px;
+  font-size: 20px;
   border: transparent;
   display: flex;
   flex-direction: column;
-  color: orangered;
-  font-size: 20px;
-  width: 90%;
-  padding: 10px 0 10px 5px;
+}
+.dashBoardContainer .dashboard .text-inp-but {
+  height: 100px;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.dashBoardContainer .dashboard .text-inp-but .descTile {
+  width: 500px;
+  height: 500px;
+  background-color: burlywood;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dashBoardContainer .dashboard .text-inp-but .descTile textarea {
+  resize: none;
+}
+.dashBoardContainer .deleteDashBtn {
+  text-align: center;
 }
 
+/*
 .card-text {
   width: 90%;
   min-height: 100px;
@@ -43,38 +67,6 @@ textarea {
   margin: 10px 0;
   border: none;
 }
-
-button {
-  margin-right: 10px;
-}
-
-textarea {
-  resize: none;
-}
-
-.dashBoardContainer {
-  display: flex;
-  height: 90vh;
-}
-
-.deleteDashBtn {
-  text-align: center;
-}
-
-.text-inp-but {
-  height: 100px;
-  border: 1px solid red;
-  margin-bottom: 20px;
-}
-
-.descTile {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 500px;
-  width: 500px;
-  background-color: burlywood;
-}
+*/
 
 /*# sourceMappingURL=app.css.map */
