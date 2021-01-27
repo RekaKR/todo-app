@@ -1,5 +1,17 @@
-@use 'reset';
-@use 'variables' as *;
+*,
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+textarea {
+  outline: none;
+}
+
 .app {
   text-align: center;
 }
@@ -14,16 +26,10 @@
 
 .dashboard-name {
   background-color: transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: orangered;
   font-size: 20px;
   width: 90%;
@@ -47,8 +53,6 @@ textarea {
 }
 
 .dashBoardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 90vh;
 }
@@ -67,10 +71,10 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   height: 500px;
   width: 500px;
   background-color: burlywood;
 }
+
 /*# sourceMappingURL=app.css.map */
