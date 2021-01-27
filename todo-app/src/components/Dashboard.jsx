@@ -7,7 +7,7 @@ function Dashboard() {
   const [cards, setCards] = useState([]);
   const listNameV = localStorage.getItem('listName');
   const addCard = () => {
-    setCards([...cards, <div key={uuidv4()}>ds</div>]);
+    setCards([...cards, <Cards key={uuidv4()} />]);
   };
   const deleteCard = (key) => {
     setCards(cards.map((item) => (item?.key === key ? undefined : item)));
@@ -27,17 +27,7 @@ function Dashboard() {
           // }}
         />
         <button onClick={addCard}>add card</button>
-        <div>
-          {cards.map((entry) => (
-            <div>
-              <Cards key={entry.key} />
-              <button onClick={() => deleteCard(entry.key)}>
-                {' '}
-                delete card
-              </button>
-            </div>
-          ))}
-        </div>
+        <div>{cards}</div>
       </div>
     </div>
     // <div className='dashboard'>

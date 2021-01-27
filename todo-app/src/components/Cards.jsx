@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
 import '../style/app.css';
-
-function Cards() {
+const Text = () => (
+  <div className='descTile'>
+    <textarea className='textArea' defaultValue='desc' name='' id=''></textarea>
+  </div>
+);
+function Cards(key) {
+  const [showText, setShowText] = useState(false);
+  const showDesc = () => setShowText(true);
+  const hideDesc = () => setShowText(false);
+  console.log(key);
   // const [cards, setCards] = useState([]);
-  const showDesc = (e) => {
-    e.target.style.display = 'block';
-  };
+
   return (
     <div className='text-inp-but'>
       <input type='text' placeholder='name me!' />
       <button>Copy</button>
-      <button>Delete</button>
-      <div className='cardDesc' onClick={showDesc}>
-        <textarea name='' id=''></textarea>
-      </div>
+      <button onClick={showDesc}>Show Desc</button>
+      <button onClick={hideDesc}>Hide Desc</button>
+      {showText ? <Text /> : null}
+      {/* <div className='cardDesc'>
+        <textarea
+          className='textArea'
+          defaultValue='desc'
+          name=''
+          id=''
+        ></textarea>
+      </div> */}
     </div>
   );
 }
