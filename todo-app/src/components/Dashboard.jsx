@@ -21,10 +21,10 @@ function Dashboard() {
           className='dashboard-name'
           // value={listNameV}
           placeholder='Untilted dashboard'
-          // onChange={(event) => {
-          //   setNames(event.target.value);
-          //   localStorage.setItem('listName', event.target.value);
-          // }}
+        // onChange={(event) => {
+        //   setNames(event.target.value);
+        //   localStorage.setItem('listName', event.target.value);
+        // }}
         />
         <button onClick={addCard}>add card</button>
         <div>{cards}</div>
