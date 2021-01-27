@@ -4,6 +4,7 @@
 .app {
   text-align: center;
 }
+<<<<<<< HEAD
 body {
   margin: 0;
   font-family: sans-serif;
@@ -17,20 +18,67 @@ body {
 .dashboard {
   margin-right: 50px;
   transition: all 0.5s ease-in-out;
+=======
+
+button {
+  margin-right: 10px;
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
 }
 
-.dashboard-name {
-  background-color: transparent;
-  box-sizing: border-box;
-  border: transparent;
+.dashBoardContainer {
+  height: 90vh;
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   color: orangered;
   font-size: 20px;
   width: 100%;
   padding: 10px 0 10px 5px;
+=======
+  
+  .dashboard {
+    background-color: lightgrey;
+    
+    .dashboard-name {
+      width: 90%;
+      color: orangered;
+      background-color: transparent;
+      padding: 10px 0 10px 5px;
+      font-size: 20px;
+      border: transparent;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-inp-but {
+      height: 100px;
+      margin-top: 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+    
+      .descTile {
+        width: 500px;
+        height: 500px;
+        background-color: burlywood;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       
+        textarea {
+          resize: none;
+        }
+      }
+    }
+  }
+
+  .deleteDashBtn {
+    text-align: center;
+  }
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
 }
 
+/*
 .card-text {
   width: 90%;
   min-height: 100px;
@@ -38,6 +86,7 @@ body {
   margin: 10px 0;
   border: none;
 }
+<<<<<<< HEAD
 
 button {
   margin-right: 10px;
@@ -184,3 +233,6 @@ textarea {
 .form-switch input:checked + i::after {
   transform: translate3d(22px, 2px, 0);
 }
+=======
+*/
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247

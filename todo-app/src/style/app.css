@@ -1,9 +1,22 @@
-@use 'reset';
-@use 'variables' as *;
+*,
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+textarea {
+  outline: none;
+}
+
 .app {
   text-align: center;
 }
 
+<<<<<<< HEAD
 body {
   margin: 0;
   font-family: sans-serif;
@@ -20,16 +33,28 @@ body {
   margin-right: 50px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+=======
+button {
+  margin-right: 10px;
 }
 
-.dashboard-name {
-  background-color: transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.dashBoardContainer {
+  height: 90vh;
   display: flex;
+}
+.dashBoardContainer .dashboard {
+  background-color: lightgrey;
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
+}
+.dashBoardContainer .dashboard .dashboard-name {
+  width: 90%;
+  color: orangered;
+  background-color: transparent;
+  padding: 10px 0 10px 5px;
+  font-size: 20px;
+  border: transparent;
+  display: flex;
+<<<<<<< HEAD
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -38,35 +63,33 @@ body {
   font-size: 20px;
   width: 100%;
   padding: 10px 0 10px 5px;
+=======
+  flex-direction: column;
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
 }
-
-.card-text {
-  width: 90%;
-  min-height: 100px;
-  background-color: white;
-  margin: 10px 0;
-  border: none;
+.dashBoardContainer .dashboard .text-inp-but {
+  height: 100px;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-
-button {
-  margin-right: 10px;
+.dashBoardContainer .dashboard .text-inp-but .descTile {
+  width: 500px;
+  height: 500px;
+  background-color: burlywood;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-textarea {
+.dashBoardContainer .dashboard .text-inp-but .descTile textarea {
   resize: none;
 }
-
-.dashBoardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90vh;
-}
-
-.deleteDashBtn {
+.dashBoardContainer .deleteDashBtn {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .text-inp-but {
   height: auto;
   border-radius: 15px;
@@ -74,8 +97,19 @@ textarea {
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.01);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.01);
+=======
+/*
+.card-text {
+  width: 90%;
+  min-height: 100px;
+  background-color: white;
+  margin: 10px 0;
+  border: none;
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
 }
+*/
 
+<<<<<<< HEAD
 .cardDesc {
   width: 100%;
   opacity: 0%;
@@ -235,3 +269,6 @@ textarea {
           transform: translate3d(22px, 2px, 0);
 }
 /*# sourceMappingURL=app.css.map */
+=======
+/*# sourceMappingURL=app.css.map */
+>>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
