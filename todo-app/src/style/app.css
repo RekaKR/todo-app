@@ -1,30 +1,28 @@
-*,
-body,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button,
-textarea {
-  outline: none;
-}
-
+@use 'reset';
+@use 'variables' as *;
 .app {
   text-align: center;
 }
 
+#root {
+  overflow-x: scroll;
+}
+
 .dashboard {
-  width: 250px;
-  min-height: 100px;
-  background-color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: aqua;
 }
 
 .dashboard-name {
   background-color: transparent;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: transparent;
   color: orangered;
   font-size: 20px;
@@ -42,11 +40,20 @@ textarea {
 
 button {
   margin-right: 10px;
-  float: right;
 }
 
 textarea {
   resize: none;
 }
 
+.dashBoardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+}
+
+.deleteDashBtn {
+  text-align: center;
+}
 /*# sourceMappingURL=app.css.map */

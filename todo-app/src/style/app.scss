@@ -4,11 +4,14 @@
 .app {
   text-align: center;
 }
-
+#root {
+  overflow-x: scroll;
+}
 .dashboard {
-  width: 250px;
-  min-height: 100px;
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+
+  background-color: aqua;
 }
 
 .dashboard-name {
@@ -32,9 +35,16 @@
 
 button {
   margin-right: 10px;
-  float: right;  
 }
 
 textarea {
   resize: none;
+}
+
+.dashBoardContainer {
+  display: flex;
+  height: 90vh;
+}
+.deleteDashBtn {
+  text-align: center;
 }
