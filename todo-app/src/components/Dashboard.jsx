@@ -4,10 +4,11 @@ import TextInpBut from './TextInpBut.jsx';
 
 function Dashboard() {
   const [names, setNames] = useState("");
+  const listNameV = localStorage.getItem('listName');
 
   return (
     <div className="dashboard">
-      <input type="text" className="dashboard-name" value={names} placeholder="Untilted dashboard" onChange={(event) => setNames(event.target.value)} />
+      <input type="text" className="dashboard-name" value={listNameV} placeholder="Untilted dashboard" onChange={(event) => { setNames(event.target.value); localStorage.setItem('listName', event.target.value) }} />
       <TextInpBut />
     </div>
   );
