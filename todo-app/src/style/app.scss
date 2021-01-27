@@ -4,11 +4,19 @@
 .app {
   text-align: center;
 }
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
 #root {
   overflow-x: scroll;
+  background-color: #e7f1fa;
+  padding: 50px;
+  height: 500vh;
 }
 .dashboard {
-  background-color: lightgrey;
+  margin-right: 50px;
+  transition: all 0.5s ease-in-out;
 }
 
 .dashboard-name {
@@ -19,7 +27,7 @@
   flex-direction: column;
   color: orangered;
   font-size: 20px;
-  width: 90%;
+  width: 100%;
   padding: 10px 0 10px 5px;
 }
 
@@ -47,16 +55,132 @@ textarea {
   text-align: center;
 }
 .text-inp-but {
-  height: 100px;
-  border: 1px solid red;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.01);
+}
+.cardDesc {
+  width: 100%;
+  opacity: 0%;
+  position: absolute;
   margin-bottom: 20px;
 }
-.descTile {
+
+.cardTrans {
+  // transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hideDesc {
+  display: flex;
+  opacity: 100%;
+  position: relative;
+}
+.inputClass {
+  height: 150px;
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+.cardTitle {
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 99;
+}
+.cardTitleHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.2s linear;
+}
+
+.form-switch i::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 500px;
-  width: 500px;
-  background-color: burlywood;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+
+.form-switch i::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(2px, 2px, 0);
+}
+
+.form-switch:active input:checked + i::after {
+  transform: translate3d(16px, 2px, 0);
+}
+
+.form-switch input {
+  display: none;
+}
+
+.form-switch input:checked + i {
+  background-color: #fd8258;
+}
+
+.form-switch input:checked + i::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.form-switch input:checked + i::after {
+  transform: translate3d(22px, 2px, 0);
 }
