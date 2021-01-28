@@ -1,5 +1,5 @@
-@import 'reset';
-@import 'variables';
+@use 'reset';
+@use 'variables' as *;
 
 .app {
   text-align: center;
