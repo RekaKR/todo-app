@@ -3,7 +3,7 @@ import Dashboard from './Dashboard';
 import { v4 as uuidv4 } from 'uuid';
 
 function ToDoApp() {
-  const [dash, setDash] = useState([]);
+  const [dash, setDash] = useState([<Dashboard key={uuidv4()} />]);
   const addDash = () => {
     setDash([...dash, <Dashboard key={uuidv4()} />]);
   };
@@ -34,12 +34,14 @@ function ToDoApp() {
           return (
             <div>
               {singleDashboard}
-              <button
-                className='deleteDashBtn'
-                onClick={() => removeItem(singleDashboard.key)}
-              >
-                - Remove Dashboard
-              </button>
+              <div className='deleteDashBtnContainer'>
+                <button
+                  className='deleteDashBtn'
+                  onClick={() => removeItem(singleDashboard.key)}
+                >
+                  x
+                </button>
+              </div>
             </div>
           );
         })}
