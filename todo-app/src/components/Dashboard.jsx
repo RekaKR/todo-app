@@ -14,7 +14,7 @@ function Dashboard() {
       <div>
         <input
           type='text'
-          className='dashboard-name'
+          className='dashboardName'
           placeholder='Untitled dashboard'
         />
         <button className='addCardBtn' onClick={addCard}>

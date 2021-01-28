@@ -20,7 +20,7 @@
       margin-top: 5px;
     }
 
-    & input:checked + i {
+    input:checked + i {
       background-color: $backgroundDarkTC;
     }
   }
@@ -56,7 +56,7 @@
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.5s ease-in-out;
 
-    .dashboard-name {
+    .dashboardName {
       background-color: transparent;
       padding: 10px 0 40px 0px;
       font-size: 20px;
