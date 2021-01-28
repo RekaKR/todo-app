@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 function ToDoApp() {
   const [dash, setDash] = useState([]);
   const addDash = () => {
-    console.log('sdf');
     setDash([...dash, <Dashboard key={uuidv4()} />]);
   };
   const removeItem = (key) => {
@@ -31,7 +30,6 @@ function ToDoApp() {
       </label>
       <div className='dashBoardContainer'>
         {dash.map((singleDashboard) => {
-          console.log(singleDashboard);
           if (!singleDashboard) return undefined;
           return (
             <div>

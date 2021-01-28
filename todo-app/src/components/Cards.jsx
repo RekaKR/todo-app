@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 // const Text = (desc) => (
 //   <div className='descTile'>
 //     <textarea className='textArea' defaultValue='+' name='' id=''>
@@ -14,7 +16,6 @@ function Cards() {
   // console.log(key);
   // const [cards, setCards] = useState([]);
   const showDesc = (e) => {
-    console.log(e.target.parentElement.parentElement.children[1]);
     e.target.parentElement.parentElement.children[1].classList.toggle(
       'hideDesc'
     );

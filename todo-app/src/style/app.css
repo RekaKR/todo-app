@@ -4,8 +4,8 @@ body,
 ::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 button,
@@ -14,111 +14,101 @@ input {
   outline: none;
 }
 
+textarea {
+  resize: none;
+}
+
 p {
   margin: 0;
+}
+
+#root {
+  height: 500vh;
+  background-color: #e7f1fa;
+  overflow-x: scroll;
+  padding: 50px;
+  transition: 0.4s;
 }
 
 .app {
   text-align: center;
 }
 
-body {
-  margin: 0;
-  font-family: sans-serif;
+.dashBoardContainer {
+  display: flex;
+  height: 90vh;
 }
-
-#root {
-  overflow-x: scroll;
-  background-color: #e7f1fa;
-  padding: 50px;
-  height: 500vh;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.dashboard {
+.dashBoardContainer .dashboard {
   margin-right: 50px;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
-
-#themeChange {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: -20px;
-  text-align: center;
-}
-
-#themeChange p {
-  margin-top: 5px;
-}
-
-#themeChange input:checked + i {
-  background-color: #1e3487;
-}
-
-.themeChangeClr {
-  background-color: #243447 !important;
-}
-
-.themeChangeTxtClr {
-  color: white;
-}
-
-.dashboard-name {
-  background-color: transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: transparent;
-  font-size: 20px;
-  padding: 10px 0 40px 0px;
-}
-
-.addCardBtn,
-.cardTitleHolder button {
+.dashBoardContainer .dashboard .addCardBtn {
   height: 40px;
   width: 40px;
   border-radius: 10px;
   text-align: center;
   background-color: white;
   border: none;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
   font-size: 24px;
   color: grey;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
-.addCardBtn:hover,
-.cardTitleHolder button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.dashBoardContainer .dashboard .addCardBtn:hover {
+  transform: scale(1.2);
   color: black;
   cursor: pointer;
+}
+
+.dashboard-name {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: transparent;
+  font-size: 20px;
+  padding: 10px 0 40px 0px;
+}
+
+.deleteDashBtn {
+  text-align: center;
+  position: relative;
+  z-index: 999;
+}
+
+#themeChange {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: -20px;
+  text-align: center;
+}
+#themeChange p {
+  margin-top: 5px;
+}
+#themeChange input:checked + i {
+  background-color: #1e3487;
 }
 
 .cardTitleHolder button {
   height: 20px;
   width: 20px;
-  font-size: 16px;
-  margin-left: 10px;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+  font-size: 16px;
   color: #fd8258;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+.cardTitleHolder button:hover {
+  transform: scale(1.2);
+  color: black;
+  cursor: pointer;
 }
 
 .card-text {
@@ -129,30 +119,12 @@ body {
   border: none;
 }
 
-textarea {
-  resize: none;
-}
-
-.dashBoardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 90vh;
-}
-
-.deleteDashBtn {
-  text-align: center;
-  position: relative;
-  z-index: 999;
-}
-
 .text-inp-but {
   height: auto;
   border-radius: 15px;
   margin-bottom: 50px;
   background-color: white;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
 }
 
 .cardDesc {
@@ -163,59 +135,37 @@ textarea {
 }
 
 .addDashBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
-
 .addDashBtn input {
   background-color: white;
   border: none;
   border-radius: 15px;
   font-size: 20px;
   padding: 20px;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
   outline: none;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   color: grey;
 }
-
 .addDashBtn input:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
   color: black;
   cursor: pointer;
 }
 
 .cardTrans {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .hideDesc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 100%;
   position: relative;
-}
-
-.killCard {
-  display: none;
 }
 
 .inputClass {
@@ -225,15 +175,20 @@ textarea {
   margin-bottom: 30px;
   border-radius: 10px;
   border: none;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
   outline: none;
   font-size: 18px;
   font-weight: 500;
   padding: 10px;
 }
 
-.cardTitle {
+.cardTitleHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cardTitleHolder .cardTitle {
   width: 80%;
   text-align: center;
   margin-top: 30px;
@@ -241,43 +196,34 @@ textarea {
   outline: none;
   border: none;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
   height: 40px;
   font-size: 20px;
   font-weight: 600;
   z-index: 99;
 }
 
-.cardTitleHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
 .form-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   margin-top: 10px;
   padding-bottom: 30px;
 }
-
+.form-switch input {
+  display: none;
+}
+.form-switch input:checked + i {
+  background-color: #fd8258;
+}
+.form-switch input:checked + i::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+.form-switch input:checked + i::after {
+  transform: translate3d(22px, 2px, 0);
+}
 .form-switch i {
   position: relative;
   display: inline-block;
@@ -287,67 +233,37 @@ textarea {
   background-color: #e6e6e6;
   border-radius: 23px;
   vertical-align: text-bottom;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-
 .form-switch i::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 42px;
   height: 22px;
   background-color: #fff;
   border-radius: 11px;
-  -webkit-transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
-          transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
-  -webkit-transition: all 0.25s linear;
+  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
   transition: all 0.25s linear;
 }
-
 .form-switch i::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 22px;
   height: 22px;
   background-color: #fff;
   border-radius: 11px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transform: translate3d(2px, 2px, 0);
-          transform: translate3d(2px, 2px, 0);
-  -webkit-transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(2px, 2px, 0);
   transition: all 0.2s ease-in-out;
 }
-
 .form-switch:active i::after {
   width: 28px;
-  -webkit-transform: translate3d(2px, 2px, 0);
-          transform: translate3d(2px, 2px, 0);
+  transform: translate3d(2px, 2px, 0);
 }
-
 .form-switch:active input:checked + i::after {
-  -webkit-transform: translate3d(16px, 2px, 0);
-          transform: translate3d(16px, 2px, 0);
-}
-
-.form-switch input {
-  display: none;
-}
-
-.form-switch input:checked + i {
-  background-color: #fd8258;
-}
-
-.form-switch input:checked + i::before {
-  -webkit-transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
-          transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
-}
-
-.form-switch input:checked + i::after {
-  -webkit-transform: translate3d(22px, 2px, 0);
-          transform: translate3d(22px, 2px, 0);
+  transform: translate3d(16px, 2px, 0);
 }
 
 .newItem {
@@ -361,10 +277,20 @@ textarea {
     opacity: 1;
   }
 }
-
 @keyframes grow {
   to {
     opacity: 1;
   }
 }
+.themeChangeClr {
+  background-color: #243447 !important;
+}
+.themeChangeClr .themeChangeTxtClr {
+  color: white;
+}
+
+.killCard {
+  display: none;
+}
+
 /*# sourceMappingURL=app.css.map */

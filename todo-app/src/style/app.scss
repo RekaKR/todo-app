@@ -1,88 +1,104 @@
 @use 'reset';
 @use 'variables' as *;
 
+#root {
+  height: 500vh;
+  background-color: $BackgroundC;
+  overflow-x: scroll;
+  padding: 50px;
+  transition: 0.4s; 
+}
+
+//Van valami haszna ennek?
 .app {
   text-align: center;
 }
-body {
-  margin: 0;
-  font-family: sans-serif;
+
+.dashBoardContainer {
+  display: flex;
+  height: 90vh;
+  
+  .dashboard {
+    margin-right: 50px;
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+
+    .addCardBtn {
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      text-align: center;
+      background-color: white;
+      border: none;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+      font-size: 24px;
+      color: grey;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-#root {
-  overflow-x: scroll;
-  background-color: #e7f1fa;
-  padding: 50px;
-  height: 500vh;
-  transition: 0.4s;
+
+//Ez a .dashboard-ban kellene, h. legyen. De a gomb szétesik, ha oda rakom.
+.dashboard-name {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: transparent;
+  font-size: 20px;
+  padding: 10px 0 40px 0px;
 }
-.dashboard {
-  margin-right: 50px;
-  transition: all 0.5s ease-in-out;
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+
+//Ez a .dashboard alatt kellene legyen. De a gomb szétesik, ha oda rakom.
+.deleteDashBtn {
+  text-align: center;
+  position: relative;
+  z-index: 999;
 }
-// .addDashBtn input:hover {
-//   transform: scale(1.1) !important;
-//   transition: all 0.2s ease-in-out;
-//   box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
-// }
+
 #themeChange {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: -20px;
   text-align: center;
+  
   p {
     margin-top: 5px;
   }
-}
-#themeChange input:checked + i {
-  background-color: #1e3487;
-}
-.themeChangeClr {
-  background-color: #243447 !important;
-}
-.themeChangeTxtClr {
-  color: white;
-}
-.dashboard-name {
-  background-color: transparent;
-  box-sizing: border-box;
-  border: transparent;
-
-  font-size: 20px;
-  padding: 10px 0 40px 0px;
-}
-.addCardBtn,
-.cardTitleHolder button {
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  text-align: center;
-  background-color: white;
-  border: none;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
-  font-size: 24px;
-  color: grey;
-  transition: 0.2s;
-  &:hover {
-    transform: scale(1.2);
-    color: black;
-    cursor: pointer;
+  
+  & input:checked + i {
+    background-color: #1e3487;
   }
 }
+
 .cardTitleHolder {
   button {
     height: 20px;
     width: 20px;
-    font-size: 16px;
-    margin-left: 10px;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+    font-size: 16px;
     color: #fd8258;
+    transition: 0.2s;
+    margin-left: 10px;
+    
+    &:hover {
+      transform: scale(1.2);
+      color: black;
+      cursor: pointer;
+    }
   }
 }
 
@@ -94,19 +110,6 @@ body {
   border: none;
 }
 
-textarea {
-  resize: none;
-}
-
-.dashBoardContainer {
-  display: flex;
-  height: 90vh;
-}
-.deleteDashBtn {
-  text-align: center;
-  position: relative;
-  z-index: 999;
-}
 .text-inp-but {
   height: auto;
   border-radius: 15px;
@@ -121,9 +124,11 @@ textarea {
   position: absolute;
   margin-bottom: 20px;
 }
+
 .addDashBtn {
   display: flex;
   align-items: flex-start;
+
   input {
     background-color: white;
     border: none;
@@ -134,28 +139,30 @@ textarea {
     outline: none;
     transition: 0.2s;
     color: grey;
-  }
-  input:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
-    color: black;
-    cursor: pointer;
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
+      color: black;
+      cursor: pointer;
+    }
   }
 }
+
 .cardTrans {
   // transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .hideDesc {
   display: flex;
   opacity: 100%;
   position: relative;
 }
-.killCard {
-  display: none;
-}
+
+
 .inputClass {
   height: 150px;
   width: 75%;
@@ -169,27 +176,30 @@ textarea {
   font-weight: 500;
   padding: 10px;
 }
-.cardTitle {
-  width: 80%;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
-  height: 40px;
-  font-size: 20px;
-  font-weight: 600;
-  z-index: 99;
-}
+
 .cardTitleHolder {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  .cardTitle {
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 99;
+  }
 }
 
+//A .cardTitleHolder -ben kellene lennie, de úgy szétesnek a formázások.
 .form-switch {
   display: flex;
   align-items: center;
@@ -198,68 +208,68 @@ textarea {
   -webkit-tap-highlight-color: transparent;
   margin-top: 10px;
   padding-bottom: 30px;
-}
+  
+  input {
+    display: none;
 
-.form-switch i {
-  position: relative;
-  display: inline-block;
-  margin-right: 0.5rem;
-  width: 46px;
-  height: 26px;
-  background-color: #e6e6e6;
-  border-radius: 23px;
-  vertical-align: text-bottom;
-  transition: all 0.2s linear;
-}
+    &:checked + i {
+      background-color: #fd8258;
+    }
 
-.form-switch i::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 42px;
-  height: 22px;
-  background-color: #fff;
-  border-radius: 11px;
-  transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
-  transition: all 0.25s linear;
-}
+    &:checked + i::before {
+      transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+    }
 
-.form-switch i::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 22px;
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
-  transform: translate3d(2px, 2px, 0);
-  transition: all 0.2s ease-in-out;
-}
+    &:checked + i::after {
+      transform: translate3d(22px, 2px, 0);
+    }
+  }
 
-.form-switch:active i::after {
-  width: 28px;
-  transform: translate3d(2px, 2px, 0);
-}
-
-.form-switch:active input:checked + i::after {
-  transform: translate3d(16px, 2px, 0);
-}
-
-.form-switch input {
-  display: none;
-}
-
-.form-switch input:checked + i {
-  background-color: #fd8258;
-}
-
-.form-switch input:checked + i::before {
-  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
-}
-
-.form-switch input:checked + i::after {
-  transform: translate3d(22px, 2px, 0);
+  i {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.2s linear;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 42px;
+      height: 22px;
+      background-color: #fff;
+      border-radius: 11px;
+      transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+      transition: all 0.25s linear;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: #fff;
+      border-radius: 11px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+      transform: translate3d(2px, 2px, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+    
+  &:active i::after {
+    width: 28px;
+    transform: translate3d(2px, 2px, 0);
+  }
+  
+  &:active input:checked + i::after {
+    transform: translate3d(16px, 2px, 0);
+  }
 }
 
 .newItem {
@@ -267,13 +277,33 @@ textarea {
   animation: grow 0.8s ease-in-out forwards;
   -webkit-animation: grow 0.8s ease-in-out forwards;
 }
+
+
+//Ez minek?
 @-webkit-keyframes grow {
   to {
     opacity: 1;
   }
 }
+//eddig
+
+
 @keyframes grow {
   to {
     opacity: 1;
   }
+}
+
+
+//toggled
+.themeChangeClr {
+  background-color: #243447 !important;
+  
+  .themeChangeTxtClr {
+    color: white;
+  }
+}
+
+.killCard {
+  display: none;
 }
