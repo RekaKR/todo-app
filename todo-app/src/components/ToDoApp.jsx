@@ -34,12 +34,14 @@ function ToDoApp() {
           return (
             <div>
               {singleDashboard}
-              <button
-                className='deleteDashBtn'
-                onClick={() => removeItem(singleDashboard.key)}
-              >
-                - Remove Dashboard
-              </button>
+              <div className='deleteDashBtnContainer'>
+                <button
+                  className='deleteDashBtn'
+                  onClick={() => removeItem(singleDashboard.key)}
+                >
+                  x
+                </button>
+              </div>
             </div>
           );
         })}
