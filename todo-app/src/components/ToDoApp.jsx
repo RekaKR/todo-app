@@ -4,18 +4,22 @@ import { v4 as uuidv4 } from 'uuid';
 
 function ToDoApp() {
   const [dash, setDash] = useState([<Dashboard key={uuidv4()} />]);
+
   const addDash = () => {
     setDash([...dash, <Dashboard key={uuidv4()} />]);
   };
+
   const removeItem = (key) => {
     setDash(dash.map((item) => (item?.key === key ? undefined : item)));
   };
+
   const themeChange = () => {
     document.querySelector('#root').classList.toggle('themeChangeClr');
     document
       .querySelector('.themeChangeText')
       .classList.toggle('themeChangeTxtClr');
   };
+
   return (
     <div>
       <label

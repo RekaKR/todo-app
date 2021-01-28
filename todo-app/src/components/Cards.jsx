@@ -1,32 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-// const Text = (desc) => (
-//   <div className='descTile'>
-//     <textarea className='textArea' defaultValue='+' name='' id=''>
-//       {desc}
-//     </textarea>
-//   </div>
-// );
 function Cards() {
-  // const [showText, setShowText] = useState(false);
-  // const showDesc = () => setShowText(true);
-  // const hideDesc = () => setShowText(false);
-  // const listNameV = localStorage.getItem('listName');
-  // const [names, setNames] = useState('');
-  // console.log(key);
-  // const [cards, setCards] = useState([]);
   const showDesc = (e) => {
     e.target.parentElement.parentElement.children[1].classList.toggle(
       'hideDesc'
     );
   };
+
   const hideCard = (e) => {
     e.target.parentElement.parentElement.classList.toggle('killCard');
   };
+
   return (
     <div className='text-inp-but newItem'>
       <div className='cardTitleHolder'>
-        <input className='cardTitle' type='text' placeholder='name me!' />
+        <input className='cardTitle' type='text' placeholder='Name me!' />
         <button onClick={hideCard} style={{ zIndex: 9999 }}>
           x
         </button>
@@ -41,16 +29,6 @@ function Cards() {
           <textarea className='inputClass' name='' id=''></textarea>
         </div>
       </div>
-      {/* <button onClick={showDesc}>Show Desc</button>
-      <button onClick={hideDesc}>Hide Desc</button> */}
-      {/* <div className='cardDesc'>
-        <textarea
-          className='textArea'
-          defaultValue='desc'
-          name=''
-          id=''
-        ></textarea>
-      </div> */}
     </div>
   );
 }
