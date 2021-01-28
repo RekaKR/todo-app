@@ -89,6 +89,24 @@
       box-shadow: $boxShadow;
 
       .cardTitleHolder {
+        @include displayCenter;
+        width: 100%;
+        
+        .cardTitle {
+          width: 80%;
+          margin: 30px 0;
+          border-radius: $borderR10;
+          box-shadow: $boxShadowSmall;
+          height: 40px;
+          font-size: 20px;
+          //font-weight: 600;
+          z-index: 99;
+      
+          &::placeholder {
+            padding-left: 5px;
+          }
+        }
+
         button {
           width: 20px;
           height: 20px;
@@ -148,26 +166,6 @@
         transform: scale(1.1);
         cursor: pointer;
       }
-    }
-  }
-}
-
-.cardTitleHolder {
-  @include displayCenter;
-  width: 100%;
-
-  .cardTitle {
-    width: 80%;
-    margin: 30px 0;
-    border-radius: $borderR10;
-    box-shadow: $boxShadowSmall;
-    height: 40px;
-    font-size: 20px;
-    font-weight: 600;
-    z-index: 99;
-
-    &::placeholder {
-      padding-left: 5px;
     }
   }
 }
