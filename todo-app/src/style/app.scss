@@ -13,6 +13,7 @@
 .app {
   text-align: center;
 }
+//eddig
 
 .dashBoardContainer {
   display: flex;
@@ -25,7 +26,7 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-
+     
     .addCardBtn {
       height: 40px;
       width: 40px;
@@ -44,11 +45,42 @@
         cursor: pointer;
       }
     }
+
+    
+  }
+
+  .newItem {
+    opacity: 0;
+    animation: grow 0.8s ease-in-out forwards;
+    //Ez minek?
+    -webkit-animation: grow 0.8s ease-in-out forwards;
+  }
+
+  .addDashBtn {
+    display: flex;
+    align-items: flex-start;
+
+    input {
+      background-color: white;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+      outline: none;
+      transition: 0.2s;
+      color: grey;
+      
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
+        color: black;
+        cursor: pointer;
+      }
+    }
   }
 }
 
-
-//Ez a .dashboard-ban kellene, h. legyen. De a gomb szétesik, ha oda rakom.
 .dashboard-name {
   background-color: transparent;
   box-sizing: border-box;
@@ -57,7 +89,6 @@
   padding: 10px 0 40px 0px;
 }
 
-//Ez a .dashboard alatt kellene legyen. De a gomb szétesik, ha oda rakom.
 .deleteDashBtn {
   text-align: center;
   position: relative;
@@ -118,65 +149,6 @@
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
 }
 
-.cardDesc {
-  width: 100%;
-  opacity: 0%;
-  position: absolute;
-  margin-bottom: 20px;
-}
-
-.addDashBtn {
-  display: flex;
-  align-items: flex-start;
-
-  input {
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 20px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-    outline: none;
-    transition: 0.2s;
-    color: grey;
-    
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
-      color: black;
-      cursor: pointer;
-    }
-  }
-}
-
-.cardTrans {
-  // transition: all 0.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hideDesc {
-  display: flex;
-  opacity: 100%;
-  position: relative;
-}
-
-
-.inputClass {
-  height: 150px;
-  width: 75%;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px;
-}
-
 .cardTitleHolder {
   display: flex;
   justify-content: center;
@@ -199,7 +171,6 @@
   }
 }
 
-//A .cardTitleHolder -ben kellene lennie, de úgy szétesnek a formázások.
 .form-switch {
   display: flex;
   align-items: center;
@@ -272,12 +243,33 @@
   }
 }
 
-.newItem {
-  opacity: 0;
-  animation: grow 0.8s ease-in-out forwards;
-  -webkit-animation: grow 0.8s ease-in-out forwards;
+.cardTrans {
+  // transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .inputClass {
+    height: 150px;
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+  }
 }
 
+.cardDesc {
+  width: 100%;
+  opacity: 0%;
+  position: absolute;
+  margin-bottom: 20px;
+}
 
 //Ez minek?
 @-webkit-keyframes grow {
@@ -294,7 +286,6 @@
   }
 }
 
-
 //toggled
 .themeChangeClr {
   background-color: #243447 !important;
@@ -302,6 +293,12 @@
   .themeChangeTxtClr {
     color: white;
   }
+}
+
+.hideDesc {
+  display: flex;
+  opacity: 100%;
+  position: relative;
 }
 
 .killCard {
