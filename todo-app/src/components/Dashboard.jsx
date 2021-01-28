@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Cards from './Cards.jsx';
 import { v4 as uuidv4 } from 'uuid';
 
 function Dashboard() {
   const [cards, setCards] = useState([]);
+
   const addCard = () => {
     setCards([...cards, <Cards key={uuidv4()} />]);
   };
