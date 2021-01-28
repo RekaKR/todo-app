@@ -11,13 +11,10 @@ body,
 button,
 textarea,
 input {
+  border: none;
   outline: none;
 }
 
 textarea {
   resize: none;
-}
-
-p {
-  margin: 0;
 }

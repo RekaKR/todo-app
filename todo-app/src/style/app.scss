@@ -1,70 +1,66 @@
-@import 'reset';
-@import 'variables';
+@use 'reset';
+@use 'variables' as *;
 
 #root {
   height: 500vh;
-  background-color: $BackgroundC;
-  overflow-x: scroll;
+  background-color: $backgroundC;
   padding: 50px;
+  overflow-x: scroll;
   transition: 0.4s;
 }
 
-//Van valami haszna ennek?
-.app {
-  text-align: center;
-}
-//eddig
 .deleteDashBtn {
-  height: 40px;
   width: 60px;
+  height: 40px;
+  color: $deletButtonLightC;
+  background-color: $backgroundC2;
   border-radius: 10px;
-  text-align: center;
-  background-color: white;
-  border: none;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+  box-shadow: $boxShadow;
   font-size: 24px;
-  color: grey;
+  text-align: center;
   transition: 0.2s;
 
   &:hover {
+    color: $hoverDarkC;
     transform: scale(1.2);
-    color: #fd8258;
     cursor: pointer;
   }
 }
+
 .deleteDashBtnContainer {
-  margin-top: 30px;
+  width: 80%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: 80%;
 }
+
 .dashBoardContainer {
-  display: flex;
   height: 90vh;
+  display: flex;
 
   .dashboard {
+    background-color: $backgroundC2;
     margin-right: 50px;
-    transition: all 0.5s ease-in-out;
-    background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease-in-out;
 
     .addCardBtn {
-      height: 40px;
       width: 40px;
-      border-radius: 10px;
-      text-align: center;
-      background-color: white;
-      border: none;
-      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+      height: 40px;
+      color: $textC;
+      background-color: $backgroundC2;
       font-size: 24px;
-      color: grey;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      box-shadow: $boxShadow;
       transition: 0.2s;
 
       &:hover {
+        color: $hoverC;
         transform: scale(1.2);
-        color: #fd8258;
         cursor: pointer;
       }
     }
@@ -73,8 +69,6 @@
   .newItem {
     opacity: 0;
     animation: grow 0.8s ease-in-out forwards;
-    //Ez minek?
-    -webkit-animation: grow 0.8s ease-in-out forwards;
   }
 
   .addDashBtn {
@@ -82,15 +76,13 @@
     align-items: flex-start;
 
     input {
-      background-color: white;
-      border: none;
-      border-radius: 15px;
-      font-size: 20px;
+      color: $textC;
+      background-color: $backgroundC2;
       padding: 20px;
+      font-size: 20px;
+      border-radius: $borderR15;
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
-      outline: none;
       transition: 0.2s;
-      color: grey;
 
       &:hover {
         transform: scale(1.1);
@@ -138,7 +130,7 @@
     width: 20px;
     border-radius: 5px;
     text-align: center;
-    background-color: white;
+    background-color: $backgroundC2;
     border: none;
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
     font-size: 16px;
@@ -157,17 +149,17 @@
 .card-text {
   width: 90%;
   min-height: 100px;
-  background-color: white;
+  background-color: $backgroundC2;
   margin: 10px 0;
   border: none;
 }
 
 .text-inp-but {
   height: auto;
-  border-radius: 15px;
+  border-radius: $borderR15;
   margin-bottom: 50px;
-  background-color: white;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+  background-color: $backgroundC2;
+  box-shadow: $boxShadow;
 }
 
 .cardTitleHolder {
@@ -178,7 +170,7 @@
 
   .cardTitle {
     width: 80%;
-    text-align: center;
+    //text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
     outline: none;
@@ -189,6 +181,10 @@
     font-size: 20px;
     font-weight: 600;
     z-index: 99;
+    
+    &::placeholder {
+      padding-left: 5px;
+    }
   }
 }
 
@@ -265,7 +261,6 @@
 }
 
 .cardTrans {
-  // transition: all 0.2s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,7 +306,7 @@
   background-color: #243447 !important;
 
   .themeChangeTxtClr {
-    color: white;
+    color: $backgroundC2;
   }
 }
 
