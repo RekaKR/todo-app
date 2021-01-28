@@ -21,10 +21,16 @@ function Cards() {
       'hideDesc'
     );
   };
+  const hideCard = (e) => {
+    e.target.parentElement.parentElement.classList.toggle('killCard');
+  };
   return (
     <div className='text-inp-but'>
       <div className='cardTitleHolder'>
         <input className='cardTitle' type='text' placeholder='name me!' />
+        <button onClick={hideCard} style={{ zIndex: 9999 }}>
+          x
+        </button>
       </div>
       <div className='descHolder'>
         <label class='form-switch'>

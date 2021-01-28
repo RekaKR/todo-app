@@ -14,7 +14,7 @@ function App() {
   };
   return (
     <>
-      <input type='button' onClick={addDash} value='Add dashboard' />
+      {/* <input type='button' onClick={addDash} value='Add dashboard' /> */}
       <div className='dashBoardContainer'>
         {dash.map((singleDashboard) => {
           console.log(singleDashboard);
@@ -31,6 +31,9 @@ function App() {
             </div>
           );
         })}
+        <div className='addDashBtn'>
+          <input type='button' onClick={addDash} value='+ Add Dashboard ' />
+        </div>
       </div>
     </>
   );
