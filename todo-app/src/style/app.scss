@@ -1,5 +1,5 @@
-@use 'reset';
-@use 'variables' as *;
+@import 'reset';
+@import 'variables';
 
 .app {
   text-align: center;
@@ -8,11 +8,13 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
 #root {
   overflow-x: scroll;
   background-color: #e7f1fa;
   padding: 50px;
   height: 500vh;
+  transition: 0.4s;
 }
 .dashboard {
   margin-right: 50px;
@@ -22,30 +24,75 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
 }
-
+// .addDashBtn input:hover {
+//   transform: scale(1.1) !important;
+//   transition: all 0.2s ease-in-out;
+//   box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
+// }
+#themeChange {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: -20px;
+  text-align: center;
+  p {
+    margin-top: 5px;
+  }
+}
+#themeChange input:checked + i {
+  background-color: #1e3487;
+}
+.themeChangeClr {
+  background-color: #243447 !important;
+}
+.themeChangeTxtClr {
+  color: white;
+}
 .dashboard-name {
   background-color: transparent;
   box-sizing: border-box;
   border: transparent;
-  display: flex;
-  flex-direction: column;
-  color: orangered;
-  font-size: 20px;
-  width: 100%;
-  padding: 10px 0 10px 5px;
-}
 
+  font-size: 20px;
+  padding: 10px 0 40px 0px;
+}
+.addCardBtn,
+.cardTitleHolder button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+  font-size: 24px;
+  color: grey;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.2);
+    color: black;
+    cursor: pointer;
+  }
+}
+.cardTitleHolder {
+  button {
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    color: #fd8258;
+  }
+}
+.AddDashButton {
+}
 .card-text {
   width: 90%;
   min-height: 100px;
   background-color: white;
   margin: 10px 0;
   border: none;
-}
-
-button {
-  margin-top: -65px;
-  margin-right: -15px;
 }
 
 textarea {
@@ -86,6 +133,14 @@ textarea {
     padding: 20px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
     outline: none;
+    transition: 0.2s;
+    color: grey;
+  }
+  input:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
+    color: black;
+    cursor: pointer;
   }
 }
 .cardTrans {
@@ -206,4 +261,20 @@ textarea {
 
 .form-switch input:checked + i::after {
   transform: translate3d(22px, 2px, 0);
+}
+
+.newItem {
+  opacity: 0;
+  animation: grow 0.8s ease-in-out forwards;
+  -webkit-animation: grow 0.8s ease-in-out forwards;
+}
+@-webkit-keyframes grow {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  to {
+    opacity: 1;
+  }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../style/app.css';
 import Cards from './Cards.jsx';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,24 +8,24 @@ function Dashboard() {
   const addCard = () => {
     setCards([...cards, <Cards key={uuidv4()} />]);
   };
-  const deleteCard = (key) => {
-    setCards(cards.map((item) => (item?.key === key ? undefined : item)));
-  };
+
   console.log(cards);
   return (
-    <div className='dashboard'>
+    <div className='dashboard newItem'>
       <div>
         <input
           type='text'
           className='dashboard-name'
           // value={listNameV}
-          placeholder='Untilted dashboard'
+          placeholder='Untitled dashboard'
           // onChange={(event) => {
           //   setNames(event.target.value);
           //   localStorage.setItem('listName', event.target.value);
           // }}
         />
-        <button onClick={addCard}>add card</button>
+        <button className='addCardBtn' onClick={addCard}>
+          +
+        </button>
         <div>{cards}</div>
       </div>
     </div>

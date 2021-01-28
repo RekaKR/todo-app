@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import '../style/app.css';
 // const Text = (desc) => (
 //   <div className='descTile'>
 //     <textarea className='textArea' defaultValue='+' name='' id=''>
@@ -25,7 +23,7 @@ function Cards() {
     e.target.parentElement.parentElement.classList.toggle('killCard');
   };
   return (
-    <div className='text-inp-but'>
+    <div className='text-inp-but newItem'>
       <div className='cardTitleHolder'>
         <input className='cardTitle' type='text' placeholder='name me!' />
         <button onClick={hideCard} style={{ zIndex: 9999 }}>
@@ -38,7 +36,7 @@ function Cards() {
           <i></i>
           Description On/Off
         </label>
-        <div className='cardTrans cardDesc'>
+        <div className='cardTrans cardDesc '>
           <textarea className='inputClass' name='' id=''></textarea>
         </div>
       </div>
