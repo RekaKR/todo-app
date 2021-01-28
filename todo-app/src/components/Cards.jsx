@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import '../style/app.css';
 <<<<<<< HEAD
+=======
+>>>>>>> Marci
 // const Text = (desc) => (
 //   <div className='descTile'>
 //     <textarea className='textArea' defaultValue='+' name='' id=''>
@@ -41,11 +44,21 @@ function Cards(key) {
       'hideDesc'
     );
   };
+  const hideCard = (e) => {
+    e.target.parentElement.parentElement.classList.toggle('killCard');
+  };
   return (
+<<<<<<< HEAD
     <div className='text-inp-but'>
 <<<<<<< HEAD
+=======
+    <div className='text-inp-but newItem'>
+>>>>>>> Marci
       <div className='cardTitleHolder'>
         <input className='cardTitle' type='text' placeholder='name me!' />
+        <button onClick={hideCard} style={{ zIndex: 9999 }}>
+          x
+        </button>
       </div>
       <div className='descHolder'>
         <label class='form-switch'>
@@ -53,7 +66,7 @@ function Cards(key) {
           <i></i>
           Description On/Off
         </label>
-        <div className='cardTrans cardDesc'>
+        <div className='cardTrans cardDesc '>
           <textarea className='inputClass' name='' id=''></textarea>
         </div>
       </div>

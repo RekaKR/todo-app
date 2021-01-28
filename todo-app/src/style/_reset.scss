@@ -8,6 +8,10 @@ body,
 }
 
 button,
-textarea {
+textarea,
+input {
   outline: none;
+}
+p {
+  margin: 0;
 }
