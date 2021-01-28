@@ -22,7 +22,6 @@ p {
   text-align: center;
 }
 
-<<<<<<< HEAD
 body {
   margin: 0;
   font-family: sans-serif;
@@ -41,11 +40,6 @@ body {
   margin-right: 50px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-<<<<<<< HEAD
-=======
-button {
-  margin-right: 10px;
-=======
   background-color: white;
   padding: 20px;
   border-radius: 20px;
@@ -81,39 +75,13 @@ button {
 
 .themeChangeTxtClr {
   color: white;
->>>>>>> Marci
 }
 
-.dashBoardContainer {
-  height: 90vh;
-  display: flex;
-}
-.dashBoardContainer .dashboard {
-  background-color: lightgrey;
->>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
-}
-.dashBoardContainer .dashboard .dashboard-name {
-  width: 90%;
-  color: orangered;
+.dashboard-name {
   background-color: transparent;
-  padding: 10px 0 10px 5px;
-  font-size: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: transparent;
-<<<<<<< HEAD
-  display: flex;
-<<<<<<< HEAD
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: orangered;
-  font-size: 20px;
-  width: 100%;
-  padding: 10px 0 10px 5px;
-=======
-  flex-direction: column;
->>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
-=======
   font-size: 20px;
   padding: 10px 0 40px 0px;
 }
@@ -151,63 +119,42 @@ button {
           box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
   border-radius: 5px;
   color: #fd8258;
->>>>>>> Marci
-}
-.dashBoardContainer .dashboard .text-inp-but {
-  height: 100px;
-  margin-top: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-<<<<<<< HEAD
-.dashBoardContainer .dashboard .text-inp-but .descTile {
-  width: 500px;
-  height: 500px;
-  background-color: burlywood;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.dashBoardContainer .dashboard .text-inp-but .descTile textarea {
-=======
-
-textarea {
->>>>>>> Marci
-  resize: none;
-}
-.dashBoardContainer .deleteDashBtn {
-  text-align: center;
-  position: relative;
-  z-index: 999;
 }
 
-<<<<<<< HEAD
-.text-inp-but {
-  height: auto;
-  border-radius: 15px;
-  margin-bottom: 50px;
-  background-color: white;
-<<<<<<< HEAD
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.01);
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.01);
-=======
-/*
 .card-text {
   width: 90%;
   min-height: 100px;
   background-color: white;
   margin: 10px 0;
   border: none;
->>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
-=======
+}
+
+textarea {
+  resize: none;
+}
+
+.dashBoardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+}
+
+.deleteDashBtn {
+  text-align: center;
+  position: relative;
+  z-index: 999;
+}
+
+.text-inp-but {
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
->>>>>>> Marci
 }
-*/
 
-<<<<<<< HEAD
 .cardDesc {
   width: 100%;
   opacity: 0%;
@@ -402,12 +349,6 @@ textarea {
   -webkit-transform: translate3d(22px, 2px, 0);
           transform: translate3d(22px, 2px, 0);
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=app.css.map */
-=======
-/*# sourceMappingURL=app.css.map */
->>>>>>> 471a85baf5c793b6cfd4d06898cb66503067b247
-=======
 
 .newItem {
   opacity: 0;
@@ -427,4 +368,3 @@ textarea {
   }
 }
 /*# sourceMappingURL=app.css.map */
->>>>>>> Marci
