@@ -43,7 +43,7 @@ function ToDoApp() {
                   className='deleteDashBtn'
                   onClick={() => removeItem(singleDashboard.key)}
                 >
-                  x
+                  X
                 </button>
               </div>
             </div>

@@ -1,8 +1,14 @@
 $backgroundC: rgb(231, 241, 250);
 $backgroundC2: rgb(255, 255, 255);
-$deletButtonLightC: rgb(253, 130, 88, 0.8);
-$hoverC: rgb(253, 130, 88);
+$backgroundDarkTC:  rgb(30, 52, 135);
+$deletButtonC: rgb(253, 130, 88);
 $hoverDarkC: rgb(0, 0, 0);
 $textC: rgb(128, 128, 128);
-$boxShadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+$themeChangeC: rgb(36, 52, 71);
+
+$borderR10: 10px;;
 $borderR15: 15px;
+
+$boxShadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+//kérdéses ->
+$boxShadowSmall: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);

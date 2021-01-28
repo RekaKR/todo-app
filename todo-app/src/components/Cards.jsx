@@ -25,7 +25,7 @@ function Cards() {
           <i></i>
           Description On/Off
         </label>
-        <div className='cardTrans cardDesc '>
+        <div className='cardTrans'>
           <textarea className='inputClass' name='' id=''></textarea>
         </div>
       </div>

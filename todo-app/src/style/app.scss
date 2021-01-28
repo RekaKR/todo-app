@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'variables' as *;
+@use 'mixins' as *;
 
 #root {
   height: 500vh;
@@ -7,14 +8,30 @@
   padding: 50px;
   overflow-x: scroll;
   transition: 0.4s;
+   
+  #themeChange {
+    margin-top: -20px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    p {
+      margin-top: 5px;
+    }
+
+    & input:checked + i {
+      background-color: $backgroundDarkTC;
+    }
+  }
 }
 
 .deleteDashBtn {
   width: 60px;
   height: 40px;
-  color: $deletButtonLightC;
+  color: $deletButtonC;
   background-color: $backgroundC2;
-  border-radius: 10px;
+  border-radius: $borderR10;
   box-shadow: $boxShadow;
   font-size: 24px;
   text-align: center;
@@ -25,13 +42,6 @@
     transform: scale(1.2);
     cursor: pointer;
   }
-}
-
-.deleteDashBtnContainer {
-  width: 80%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .dashBoardContainer {
@@ -46,6 +56,13 @@
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.5s ease-in-out;
 
+    .dashboard-name {
+      background-color: transparent;
+      padding: 10px 0 40px 0px;
+      font-size: 20px;
+      border: transparent;
+    }
+
     .addCardBtn {
       width: 40px;
       height: 40px;
@@ -53,16 +70,57 @@
       background-color: $backgroundC2;
       font-size: 24px;
       text-align: center;
-      border: none;
-      border-radius: 10px;
+      border-radius: $borderR10;
       box-shadow: $boxShadow;
       transition: 0.2s;
 
       &:hover {
-        color: $hoverC;
+        color: $deletButtonC;
         transform: scale(1.2);
         cursor: pointer;
       }
+    }
+
+    .text-inp-but {
+      height: auto;
+      background-color: $backgroundC2;
+      margin-bottom: 50px;
+      border-radius: $borderR15;
+      box-shadow: $boxShadow;
+
+      .cardTitleHolder {
+        button {
+          width: 20px;
+          height: 20px;
+          color: $deletButtonC;
+          background-color: $backgroundC2;
+          margin-left: 10px;
+          font-size: 16px;
+          text-align: center;
+          border-radius: 5px;
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
+          transition: 0.2s;
+
+          &:hover {
+            color: $hoverDarkC;
+            transform: scale(1.2);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .deleteDashBtnContainer {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  
+    .deleteDashBtn {
+      text-align: center;
+      position: relative;
+      z-index: 999;
     }
   }
 
@@ -85,98 +143,24 @@
       transition: 0.2s;
 
       &:hover {
-        transform: scale(1.1);
+        color: $hoverDarkC;
         box-shadow: 0px 0px 13px 7px rgba(0, 0, 0, 0.08);
-        color: black;
+        transform: scale(1.1);
         cursor: pointer;
       }
     }
   }
 }
 
-.dashboard-name {
-  background-color: transparent;
-  box-sizing: border-box;
-  border: transparent;
-  font-size: 20px;
-  padding: 10px 0 40px 0px;
-}
-
-.deleteDashBtn {
-  text-align: center;
-  position: relative;
-  z-index: 999;
-}
-
-#themeChange {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: -20px;
-  text-align: center;
-
-  p {
-    margin-top: 5px;
-  }
-
-  & input:checked + i {
-    background-color: #1e3487;
-  }
-}
-
 .cardTitleHolder {
-  button {
-    height: 20px;
-    width: 20px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: $backgroundC2;
-    border: none;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
-    font-size: 16px;
-    color: #fd8258;
-    transition: 0.2s;
-    margin-left: 10px;
-
-    &:hover {
-      transform: scale(1.2);
-      color: black;
-      cursor: pointer;
-    }
-  }
-}
-
-.card-text {
-  width: 90%;
-  min-height: 100px;
-  background-color: $backgroundC2;
-  margin: 10px 0;
-  border: none;
-}
-
-.text-inp-but {
-  height: auto;
-  border-radius: $borderR15;
-  margin-bottom: 50px;
-  background-color: $backgroundC2;
-  box-shadow: $boxShadow;
-}
-
-.cardTitleHolder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayCenter;
   width: 100%;
 
   .cardTitle {
     width: 80%;
-    //text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
+    margin: 30px 0;
+    border-radius: $borderR10;
+    box-shadow: $boxShadowSmall;
     height: 40px;
     font-size: 20px;
     font-weight: 600;
@@ -201,7 +185,7 @@
     display: none;
 
     &:checked + i {
-      background-color: #fd8258;
+      background-color: $deletButtonC;
     }
 
     &:checked + i::before {
@@ -261,40 +245,25 @@
 }
 
 .cardTrans {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .inputClass {
-    height: 150px;
-    width: 75%;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.025);
-    outline: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px;
-  }
-}
-
-.cardDesc {
+  @include displayCenter;
   width: 100%;
+  margin-bottom: 20px;
   opacity: 0%;
   position: absolute;
-  margin-bottom: 20px;
-}
 
-//Ez minek?
-@-webkit-keyframes grow {
-  to {
-    opacity: 1;
+  .inputClass {
+    width: 75%;
+    height: 150px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: $borderR10;
+    box-shadow: $boxShadowSmall;
   }
 }
-//eddig
 
+//keyframes
 @keyframes grow {
   to {
     opacity: 1;
@@ -303,7 +272,7 @@
 
 //toggled
 .themeChangeClr {
-  background-color: #243447 !important;
+  background-color: $themeChangeC !important;
 
   .themeChangeTxtClr {
     color: $backgroundC2;
@@ -311,8 +280,8 @@
 }
 
 .hideDesc {
-  display: flex;
   opacity: 100%;
+  display: flex;
   position: relative;
 }
 
