@@ -8,7 +8,7 @@ function Cards() {
   };
 
   const hideCard = (e) => {
-    e.target.parentElement.parentElement.classList.toggle('killCard');
+    e.target.parentElement.parentElement.remove();
   };
 
   return (

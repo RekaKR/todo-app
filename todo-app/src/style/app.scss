@@ -8,7 +8,7 @@
   padding: 50px;
   overflow-x: scroll;
   transition: 0.4s;
-   
+
   #themeChange {
     margin-top: -20px;
     text-align: center;
@@ -116,7 +116,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-  
+
     .deleteDashBtn {
       text-align: center;
       position: relative;
@@ -165,7 +165,7 @@
     font-size: 20px;
     font-weight: 600;
     z-index: 99;
-    
+
     &::placeholder {
       padding-left: 5px;
     }
