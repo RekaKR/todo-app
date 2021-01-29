@@ -70,13 +70,15 @@ textarea {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
   transition: all 0.5s ease-in-out;
 }
-.dashBoardContainer .dashboard .dashboardName {
+.dashBoardContainer .dashboard div {
+  min-width: 283px;
+}
+.dashBoardContainer .dashboard div .dashboardName {
   background-color: transparent;
   padding: 10px 0 40px 0px;
   font-size: 20px;
-  border: transparent;
 }
-.dashBoardContainer .dashboard .addCardBtn {
+.dashBoardContainer .dashboard div .addCardBtn {
   width: 40px;
   height: 40px;
   color: gray;
@@ -87,7 +89,7 @@ textarea {
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
   transition: 0.2s;
 }
-.dashBoardContainer .dashboard .addCardBtn:hover {
+.dashBoardContainer .dashboard div .addCardBtn:hover {
   color: #fd8258;
   transform: scale(1.2);
   cursor: pointer;
@@ -108,13 +110,11 @@ textarea {
 .dashBoardContainer .dashboard .textInp .cardTitleHolder .cardTitle {
   width: 80%;
   margin: 30px 0;
+  padding-left: 5px;
   border-radius: 10px;
   height: 40px;
   font-size: 20px;
   z-index: 99;
-}
-.dashBoardContainer .dashboard .textInp .cardTitleHolder .cardTitle::placeholder {
-  padding-left: 5px;
 }
 .dashBoardContainer .dashboard .textInp .cardTitleHolder button {
   width: 20px;

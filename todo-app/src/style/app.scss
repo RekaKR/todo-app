@@ -57,28 +57,31 @@
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.5s ease-in-out;
 
-    .dashboardName {
-      background-color: transparent;
-      padding: 10px 0 40px 0px;
-      font-size: 20px;
-      border: transparent;
-    }
+    div {
+      min-width: 283px;
 
-    .addCardBtn {
-      width: 40px;
-      height: 40px;
-      color: $textC;
-      background-color: $backgroundC2;
-      font-size: 24px;
-      text-align: center;
-      border-radius: $borderR10;
-      box-shadow: $boxShadow;
-      transition: 0.2s;
+      .dashboardName {
+        background-color: transparent;
+        padding: 10px 0 40px 0px;
+        font-size: 20px;
+      }
 
-      &:hover {
-        color: $deletButtonC;
-        transform: scale(1.2);
-        cursor: pointer;
+      .addCardBtn {
+        width: 40px;
+        height: 40px;
+        color: $textC;
+        background-color: $backgroundC2;
+        font-size: 24px;
+        text-align: center;
+        border-radius: $borderR10;
+        box-shadow: $boxShadow;
+        transition: 0.2s;
+
+        &:hover {
+          color: $deletButtonC;
+          transform: scale(1.2);
+          cursor: pointer;
+        }
       }
     }
 
@@ -96,16 +99,13 @@
         .cardTitle {
           width: 80%;
           margin: 30px 0;
+          padding-left: 5px;
           border-radius: $borderR10;
           //box-shadow: $boxShadowSmall;
           height: 40px;
           font-size: 20px;
           //font-weight: 600;
           z-index: 99;
-      
-          &::placeholder {
-            padding-left: 5px;
-          }
         }
 
         button {
