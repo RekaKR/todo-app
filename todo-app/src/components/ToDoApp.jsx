@@ -22,7 +22,7 @@ function ToDoApp() {
 
   return (
     <div>
-      <label id='themeChange' className='form-switch'>
+      <label id='themeChange' className='formSwitch'>
         <input type='checkbox' onChange={themeChange} />
         <i></i>
         <p className='themeChangeText'>Night mode</p>

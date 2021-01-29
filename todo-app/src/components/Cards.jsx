@@ -12,7 +12,7 @@ function Cards() {
   };
 
   return (
-    <div className='text-inp-but newItem'>
+    <div className='textInp newItem'>
       <div className='cardTitleHolder'>
         <input className='cardTitle' type='text' placeholder='Name me!' />
         <button onClick={hideCard} style={{ zIndex: 9999 }}>
@@ -20,7 +20,7 @@ function Cards() {
         </button>
       </div>
       <div className='descHolder'>
-        <label class='form-switch'>
+        <label class='formSwitch'>
           <input type='checkbox' onChange={showDesc} />
           <i></i>
           Description On/Off

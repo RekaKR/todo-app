@@ -10,6 +10,7 @@
   transition: 0.4s;
 
   #themeChange {
+    width: 140px;
     margin-top: -20px;
     text-align: center;
     display: flex;
@@ -81,7 +82,7 @@
       }
     }
 
-    .text-inp-but {
+    .textInp {
       height: auto;
       background-color: $backgroundC2;
       margin-bottom: 50px;
@@ -96,7 +97,7 @@
           width: 80%;
           margin: 30px 0;
           border-radius: $borderR10;
-          box-shadow: $boxShadowSmall;
+          //box-shadow: $boxShadowSmall;
           height: 40px;
           font-size: 20px;
           //font-weight: 600;
@@ -170,7 +171,7 @@
   }
 }
 
-.form-switch {
+.formSwitch {
   @include displayCenter;
   margin-top: 10px;
   padding-bottom: 30px;

@@ -27,6 +27,7 @@ textarea {
   transition: 0.4s;
 }
 #root #themeChange {
+  width: 140px;
   margin-top: -20px;
   text-align: center;
   display: flex;
@@ -91,32 +92,31 @@ textarea {
   transform: scale(1.2);
   cursor: pointer;
 }
-.dashBoardContainer .dashboard .text-inp-but {
+.dashBoardContainer .dashboard .textInp {
   height: auto;
   background-color: white;
   margin-bottom: 50px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
 }
-.dashBoardContainer .dashboard .text-inp-but .cardTitleHolder {
+.dashBoardContainer .dashboard .textInp .cardTitleHolder {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.dashBoardContainer .dashboard .text-inp-but .cardTitleHolder .cardTitle {
+.dashBoardContainer .dashboard .textInp .cardTitleHolder .cardTitle {
   width: 80%;
   margin: 30px 0;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
   height: 40px;
   font-size: 20px;
   z-index: 99;
 }
-.dashBoardContainer .dashboard .text-inp-but .cardTitleHolder .cardTitle::placeholder {
+.dashBoardContainer .dashboard .textInp .cardTitleHolder .cardTitle::placeholder {
   padding-left: 5px;
 }
-.dashBoardContainer .dashboard .text-inp-but .cardTitleHolder button {
+.dashBoardContainer .dashboard .textInp .cardTitleHolder button {
   width: 20px;
   height: 20px;
   color: #fd8258;
@@ -128,7 +128,7 @@ textarea {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.07);
   transition: 0.2s;
 }
-.dashBoardContainer .dashboard .text-inp-but .cardTitleHolder button:hover {
+.dashBoardContainer .dashboard .textInp .cardTitleHolder button:hover {
   color: black;
   transform: scale(1.2);
   cursor: pointer;
@@ -168,7 +168,7 @@ textarea {
   cursor: pointer;
 }
 
-.form-switch {
+.formSwitch {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,19 +177,19 @@ textarea {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.form-switch input {
+.formSwitch input {
   display: none;
 }
-.form-switch input:checked + i {
+.formSwitch input:checked + i {
   background-color: #fd8258;
 }
-.form-switch input:checked + i::before {
+.formSwitch input:checked + i::before {
   transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
 }
-.form-switch input:checked + i::after {
+.formSwitch input:checked + i::after {
   transform: translate3d(22px, 2px, 0);
 }
-.form-switch i {
+.formSwitch i {
   width: 46px;
   height: 26px;
   background-color: #e6e6e6;
@@ -200,7 +200,7 @@ textarea {
   position: relative;
   transition: all 0.2s linear;
 }
-.form-switch i::before {
+.formSwitch i::before {
   content: "";
   width: 42px;
   height: 22px;
@@ -211,7 +211,7 @@ textarea {
   transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
   transition: all 0.25s linear;
 }
-.form-switch i::after {
+.formSwitch i::after {
   content: "";
   width: 22px;
   height: 22px;
@@ -223,11 +223,11 @@ textarea {
   transform: translate3d(2px, 2px, 0);
   transition: all 0.2s ease-in-out;
 }
-.form-switch:active i::after {
+.formSwitch:active i::after {
   width: 28px;
   transform: translate3d(2px, 2px, 0);
 }
-.form-switch:active input:checked + i::after {
+.formSwitch:active input:checked + i::after {
   transform: translate3d(16px, 2px, 0);
 }
 
