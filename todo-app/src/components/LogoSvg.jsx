@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoSvg = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -7.5 30 40" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -9 30 40" stroke="currentColor">
       <g id="trashGroup" fill="rgb(253, 130, 88)" >
         <path id="path4" d="M10 3v3h9V3a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1z" />
         <path id="path6" d="M4 5v1h21V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1z" />
