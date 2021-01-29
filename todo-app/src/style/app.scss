@@ -30,7 +30,6 @@
 .deleteDashBtn {
   width: 60px;
   height: 40px;
-  color: $deletButtonC;
   background-color: $backgroundC2;
   border-radius: $borderR10;
   box-shadow: $boxShadow;
@@ -39,9 +38,33 @@
   transition: 0.2s;
 
   &:hover {
-    color: $hoverDarkC;
     transform: scale(1.2);
     cursor: pointer;
+  }
+
+  svg {
+    width: auto;
+    height: 40px;
+    fill: $deletButtonC;
+    stroke: $deletButtonC;
+    
+    g {
+      transition: 0.4s linear;
+    }
+  }
+
+  &:hover > svg {
+    
+    g {
+      transform: rotate(8deg);
+      transform-origin: top right;
+    }
+
+    g,
+    path {
+      fill: $hoverDarkC;
+      stroke: $hoverDarkC;
+    }
   }
 }
 
@@ -109,11 +132,10 @@
         }
 
         button {
-          width: 20px;
-          height: 20px;
+          width: 25px;
+          height: 25px;
           color: $deletButtonC;
           background-color: $backgroundC2;
-          margin-left: 10px;
           font-size: 16px;
           text-align: center;
           border-radius: 5px;

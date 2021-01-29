@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Dashboard from './Dashboard';
 import { v4 as uuidv4 } from 'uuid';
+import LogoSvg from './LogoSvg.jsx';
 
 function ToDoApp() {
   const [dash, setDash] = useState([<Dashboard key={uuidv4()} />]);
@@ -38,7 +39,7 @@ function ToDoApp() {
                   className='deleteDashBtn'
                   onClick={() => removeItem(singleDashboard.key)}
                 >
-                  X
+                  <LogoSvg />
                 </button>
               </div>
             </div>

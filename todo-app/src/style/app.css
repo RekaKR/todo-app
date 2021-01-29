@@ -44,7 +44,6 @@ textarea {
 .deleteDashBtn {
   width: 60px;
   height: 40px;
-  color: #fd8258;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
@@ -53,9 +52,26 @@ textarea {
   transition: 0.2s;
 }
 .deleteDashBtn:hover {
-  color: black;
   transform: scale(1.2);
   cursor: pointer;
+}
+.deleteDashBtn svg {
+  width: auto;
+  height: 40px;
+  fill: #fd8258;
+  stroke: #fd8258;
+}
+.deleteDashBtn svg g {
+  transition: 0.4s linear;
+}
+.deleteDashBtn:hover > svg g {
+  transform: rotate(8deg);
+  transform-origin: top right;
+}
+.deleteDashBtn:hover > svg g,
+.deleteDashBtn:hover > svg path {
+  fill: black;
+  stroke: black;
 }
 
 .dashBoardContainer {
@@ -117,11 +133,10 @@ textarea {
   z-index: 99;
 }
 .dashBoardContainer .dashboard .textInp .cardTitleHolder button {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   color: #fd8258;
   background-color: white;
-  margin-left: 10px;
   font-size: 16px;
   text-align: center;
   border-radius: 5px;
