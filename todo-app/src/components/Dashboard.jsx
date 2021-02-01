@@ -6,7 +6,7 @@ function Dashboard() {
   const [cards, setCards] = useState([]);
 
   const addCard = () => {
-    setCards([...cards, <Cards key={uuidv4()} />]);
+    setCards([...cards, { key: uuidv4() }]);
   };
 
   return (
@@ -20,7 +20,11 @@ function Dashboard() {
         <button className='addCardBtn' onClick={addCard}>
           +
         </button>
-        <div>{cards}</div>
+        <div>
+          {cards.map((item) => (
+            <Cards key={item.key} />
+          ))}
+        </div>
       </div>
     </div>
   );

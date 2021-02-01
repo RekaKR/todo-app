@@ -5,15 +5,16 @@ import LogoSvg from './LogoSvg.jsx';
 
 function ToDoApp() {
   const [dash, setDash] = useState([<Dashboard key={uuidv4()} />]);
-
+  //Item Add
   const addDash = () => {
     setDash([...dash, <Dashboard key={uuidv4()} />]);
   };
-
+  //Item Remove
   const removeItem = (key) => {
-    setDash(dash.map((item) => (item?.key === key ? undefined : item)));
+    setDash((prevState) => [...prevState.filter((item) => item.key !== key)]);
   };
 
+  //Theme Change
   const themeChange = () => {
     document.querySelector('#root').classList.toggle('themeChangeClr');
     document
@@ -30,16 +31,16 @@ function ToDoApp() {
       </label>
       <div className='dashBoardContainer'>
         {dash.map((singleDashboard) => {
-          if (!singleDashboard) return undefined;
+          // if (singleDashboard === undefined) return undefined;
           return (
-            <div>
-              {singleDashboard}
+            <div key={singleDashboard.key}>
+              <Dashboard />
               <div className='deleteDashBtnContainer'>
                 <button
                   className='deleteDashBtn'
                   onClick={() => removeItem(singleDashboard.key)}
                 >
-                  <LogoSvg />
+                  <LogoSvg key={uuidv4()} />
                 </button>
               </div>
             </div>
